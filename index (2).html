@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новая жизнь - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Новая жизнь</div>
+        <nav>
+            <ul>
+                <li><a href="search.html">Поиск</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="add.html">Добавить</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="slider">
+        <!-- Слайдер с найденными животными -->
+    </section>
+    
+    <section class="quick-search">
+        <input type="text" placeholder="Введите вид животного">
+        <button>Найти</button>
+    </section>
+    
+    <section class="facts">
+        <div>Помогли найти более 500 животных</div>
+        <div>Более трех лет способствуем возвращению питомцев</div>
+        <div>Все услуги оказываются бесплатно</div>
+    </section>
+    
+    <section class="animals">
+        <!-- Карточки с найденными животными -->
+    </section>
+    
+    <section class="reviews" id="reviews">
+        <!-- Отзывы владельцев -->
+    </section>
+    
+    <section class="subscribe">
+        <input type="email" placeholder="Ваш email">
+        <input type="checkbox" id="consent"> <label for="consent">Согласие на обработку данных</label>
+        <button>Подписаться</button>
+    </section>
+    
+   <section class="recent-animals">
+    <h2>Недавно найденные животные</h2>
+    <div class="slider">
+        <div class="slider-container">
+            <div class="slide">
+                <img src="images/cat.jpg" alt="Найденный кот">
+                <div class="slide-info">
+                    <h3>Кот</h3>
+                    <p>Найден во дворе на улице Лесная, выглядит испуганным.</p>
+                    <button onclick="location.href='found-animal.html'">Подробнее</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/dog.jpg" alt="Найденная собака">
+                <div class="slide-info">
+                    <h3>Собака</h3>
+                    <p>Замечена около супермаркета "Глобус", без ошейника.</p>
+                    <button onclick="location.href='found-animal1.html'">Подробнее</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/ferret.jpg" alt="Найденный хорёк">
+                <div class="slide-info">
+                    <h3>Хорёк</h3>
+                    <p>Бегал по детской площадке в парке, очень активный.</p>
+                    <button onclick="location.href='animal-card.html'">Подробнее</button>
+                </div>
+            </div>
+        </div>
+        <div class="slider-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </div>
+</section>
+
+   
+    <footer>
+        <p>Телефон: 8 (800)123-45-67</p>
+        <p>Email: mail@newlife.ru</p>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="register.html">Регистрация</a>
+            <a href="login.html">Авторизация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="add.html">Найдено животное</a>
+            <a href="index.html">Поиск</a>
+        </nav>
+    </footer>
+ <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+            const totalSlides = slides.length;
+
+            function changeSlide() {
+                // Скрываем все слайды
+                for (let i = 0; i < totalSlides; i++) {
+                    slides[i].style.display = 'none';
+                    indicators[i].classList.remove('active');
+                }
+
+                // Показываем текущий слайд
+                slides[currentSlide].style.display = 'block';
+                indicators[currentSlide].classList.add('active');
+            }
+
+            // Устанавливаем начальный слайд
+            changeSlide();
+
+            // Обработчик клика на индикатор
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', function () {
+                    currentSlide = index;
+                    changeSlide();
+                });
+            });
+
+            // Автоматическое переключение слайдов каждые 5 секунд
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                changeSlide();
+            }, 5000);
+        });
+    </script>
+
+
+
+</body>
+</html>

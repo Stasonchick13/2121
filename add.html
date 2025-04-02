@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление объявления - Новая жизнь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Новая жизнь</div>
+        <nav>
+            <ul>
+                <li><a href="search.html">Поиск</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="add-animal">
+        <h2>Добавить информацию о найденном животном</h2>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="phone">Контактный номер телефона:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail нашедшего:</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="register">Зарегистрироваться:</label>
+                <input type="checkbox" id="register" name="register">
+                <span>Если хотите зарегистрироваться, отметьте этот пункт</span>
+            </div>
+
+            <div class="register-fields" style="display: none;">
+                <div class="form-group">
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Подтвердите пароль:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Подтвердите пароль" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="animal-type">Вид животного:</label>
+                <select id="animal-type" name="animal-type" required>
+                    <option value="cat">Кот</option>
+                    <option value="dog">Собака</option>
+                    <option value="ferret">Хорёк</option>
+                    <option value="rabbit">Кролик</option>
+                    <option value="other">Другое</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="animal-photos">Фото животного (максимум 3):</label>
+                <input type="file" id="animal-photos" name="animal-photos[]" accept="image/*" multiple required>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-info">Дополнительная информация:</label>
+                <textarea id="additional-info" name="additional-info" placeholder="Укажите дополнительные сведения о животном" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tag">Клеймо (если есть):</label>
+                <input type="text" id="tag" name="tag" placeholder="Укажите клеймо, если есть">
+            </div>
+
+            <div class="form-group">
+                <label for="region">Район:</label>
+                <input type="text" id="region" name="region" placeholder="Укажите район" required>
+            </div>
+
+            <div class="form-group">
+                <label for="date-found">Дата, когда было найдено животное:</label>
+                <input type="date" id="date-found" name="date-found" required>
+            </div>
+
+            <div class="form-group">
+                <label for="consent">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    Согласие на обработку персональных данных
+                </label>
+            </div>
+
+            <button type="submit" class="btn-submit">Добавить объявление</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Телефон: 8 (800)123-45-67</p>
+        <p>Email: mail@newlife.ru</p>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="register.html">Регистрация</a>
+            <a href="login.html">Авторизация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="add.html">Найдено животное</a>
+            <a href="search.html">Поиск</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Показ/скрытие полей для регистрации при изменении состояния чекбокса
+        document.getElementById('register').addEventListener('change', function() {
+            var registerFields = document.querySelector('.register-fields');
+            if (this.checked) {
+                registerFields.style.display = 'block';
+            } else {
+                registerFields.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

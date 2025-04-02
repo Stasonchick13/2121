@@ -1,0 +1,787 @@
+/* Основные стили */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Основные секции */
+section {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quick-search input,
+.quick-search button {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.quick-search input {
+    width: 70%;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.quick-search button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100px;
+    transition: background-color 0.3s;
+}
+
+.quick-search button:hover {
+    background-color: #0056b3;
+}
+
+.facts div {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #777;
+}
+
+/* Карточки животных */
+.animals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.animals .animal-card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: calc(33% - 20px);
+    transition: transform 0.3s;
+}
+
+.animals .animal-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Слайдер */
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 40px auto;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slide-info {
+    margin-top: 20px;
+}
+
+.slide-info h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.slide-info p {
+    font-size: 18px;
+    color: #666;
+}
+
+.slide button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.slide button:hover {
+    background: #0056b3;
+}
+
+/* Индикация активного слайда */
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background: #007bff;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer nav a:hover {
+    color: #007bff;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quick-search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animals .animal-card {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .slider-container {
+        flex-direction: column;
+    }
+}
+
+/* Общие стили для всей страницы */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Стили для секции логина */
+.login {
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Кнопка входа */
+button.btn-primary {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Ссылка для восстановления пароля */
+.password-reset {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.password-reset a {
+    color: #007bff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.password-reset a:hover {
+    color: #0056b3;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .login {
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+/* Общие стили для страницы профиля */
+.profile {
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.profile h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.profile-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.info-item span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.info-item .btn-edit {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.info-item .btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.user-ads h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ad-group {
+    margin-bottom: 40px;
+}
+
+.ad-group h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ad-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.ad-info {
+    flex: 1;
+}
+
+.ad-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.ad-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.ad-actions button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.ad-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Цветовая дифференциация групп */
+.ad-group.active {
+    border-left: 5px solid #28a745;
+}
+
+.ad-group.moderation {
+    border-left: 5px solid #ffc107;
+}
+
+.ad-group.found {
+    border-left: 5px solid #17a2b8;
+}
+
+.ad-group.archive {
+    border-left: 5px solid #6c757d;
+}
+
+/* Общие стили для страницы добавления объявления */
+.add-animal {
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.add-animal h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group span {
+    font-size: 14px;
+    color: #888;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.register-fields {
+    margin-top: 20px;
+}
+
+.register-fields .form-group {
+    margin-bottom: 15px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Общие стили для страницы регистрации */
+.registration {
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+.registration h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group span {
+    font-size: 14px;
+    color: #888;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .registration {
+        padding: 20px;
+    }
+}
+
+/* Общие стили для страницы карточки животного */
+.animal-card {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.animal-images {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.animal-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animal-info {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animal-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.animal-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.animal-info p strong {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .animal-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animal-info {
+        width: 100%;
+    }
+
+    .animal-images {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Общие стили для страницы карточки животного */
+.animal-card {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.animal-images {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.animal-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animal-info {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.animal-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.animal-info p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.animal-info p strong {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+footer nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .animal-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animal-info {
+        width: 100%;
+    }
+
+    .animal-images {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в личный кабинет - Новая жизнь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Новая жизнь</div>
+        <nav>
+            <ul>
+                <li><a href="search.html">Поиск</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="add.html">Добавить</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="login">
+        <h2>Вход в личный кабинет</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Введите ваш E-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Введите пароль" required>
+            </div>
+            <button type="submit" class="btn-primary">Войти</button>
+            <div class="password-reset">
+                <a href="reset-password.html">Забыли пароль?</a>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>Телефон: 8 (800)123-45-67</p>
+        <p>Email: mail@newlife.ru</p>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="register.html">Регистрация</a>
+            <a href="login.html">Авторизация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="add.html">Найдено животное</a>
+            <a href="search.html">Поиск</a>
+        </nav>
+    </footer>
+</body>
+</html>

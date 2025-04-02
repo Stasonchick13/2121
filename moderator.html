@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кабинет модератора</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Новая Жизнь</div>
+        <nav>
+           <ul>
+           <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">Поиск</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <nav>
+           <ul>
+           <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">Поиск</a></li>
+                <li><a href="register.html">Регистрация</a></li>
+                <li><a href="login.html">Вход</a></li>
+                <li><a href="profile.html">Личный кабинет</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+        </nav>
+   
+   
+   
+   
+   
+    <section class="moderator-panel">
+        <h2>Кабинет модератора</h2>
+
+        <div class="filters">
+            <label for="filter-status">Фильтр по статусу:</label>
+            <select id="filter-status">
+                <option>Все</option>
+                <option>На модерации</option>
+                <option>Активные</option>
+                <option>Найдено</option>
+                <option>В архиве</option>
+            </select>
+        </div>
+
+        <div class="ad-list">
+            <div class="ad-item">
+                <img src="assets/images/dog1.jpg" alt="Собака">
+                <div class="ad-info">
+                    <p><strong>Вид:</strong> Собака</p>
+                    <p><strong>Район:</strong> Центральный</p>
+                    <p><strong>Дата:</strong> 15 марта 2025</p>
+                    <p><strong>Контакт:</strong> +7 (900) 123-45-67</p>
+                    <p><strong>Статус:</strong> <span class="status">На модерации</span></p>
+                    <div class="moderator-actions">
+                        <button class="approve">Одобрить</button>
+                        <button class="archive">Архивировать</button>
+                        <button class="delete">Удалить</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ad-item">
+                <img src="assets/images/cat1.jpg" alt="Кот">
+                <div class="ad-info">
+                    <p><strong>Вид:</strong> Кот</p>
+                    <p><strong>Район:</strong> Северный</p>
+                    <p><strong>Дата:</strong> 18 марта 2025</p>
+                    <p><strong>Контакт:</strong> +7 (911) 654-32-10</p>
+                    <p><strong>Статус:</strong> <span class="status">Активное</span></p>
+                    <div class="moderator-actions">
+                        <button class="archive">Архивировать</button>
+                        <button class="delete">Удалить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+       <p>Телефон: 8 (800)123-45-67</p>
+        <p>Email: mail@newlife.ru</p>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="register.html">Регистрация</a>
+            <a href="login.html">Авторизация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="add.html">Найдено животное</a>
+            <a href="search.html">Поиск</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
